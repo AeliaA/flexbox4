@@ -1,0 +1,42 @@
+.layout {
+display: flex;
+flex-direction: column;
+height: 500px;
+}
+
+header, footer {
+	background: pink;
+}
+
+p {
+	color: #fff;
+	padding:20px;
+}
+
+.items {
+	display: flex;
+	flex-grow: 1;
+	background: #3498bd;
+}
+.column1 {
+	background: #F17c72;
+	flex-grow: 1;
+}
+.column2 {
+	background: #32AC97;
+	width: 160px;
+	order: -1;
+}
+.column3 {
+	background: #7F4C76;
+	width: 160px;
+}
+@media screen and (max-width: 600px){
+.items{
+flex-direction: column;
+}
+
+.column2, .column3 {
+width: auto; /*removes the fixed width for column2 and column3*/
+}
+}
